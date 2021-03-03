@@ -1,0 +1,28 @@
+nav {
+  background: #e3b353;
+  display: flex;
+  align-content: center;
+}
+
+nav > * {
+  align-self: center;
+  padding: 0.2rem;
+  padding-left: 1rem;
+}
+
+nav > a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+}
+
+nav > .cartLogo {
+  margin-left: auto;
+  padding-right: 1rem;
+}
+
+nav > a:hover {
+  color: deepskyblue;
+  font-weight: bolder;
+}

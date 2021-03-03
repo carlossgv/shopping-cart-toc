@@ -1,0 +1,36 @@
+.mainHome {
+  background-position: center;
+  height: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+
+.mainHome > .shopButton {
+  margin: auto;
+  font-family: 'Bebas Neue', cursive;
+  background: #fff;
+  padding: 2rem 0 1.3rem 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-decoration: none !important;
+}
+
+.mainHome > .shopButton:hover {
+  transform: scale(1.01);
+}
+
+.mainHome > .shopButton:active {
+  transform: scale(0.98);
+}
+
+.mainHome a {
+  text-decoration: none !important;
+  color: black;
+  font-size: 6rem;
+  padding: 2rem;
+  margin-top: 1rem;
+}
