@@ -1,28 +1,33 @@
 nav {
   background: #e3b353;
-  display: flex;
-  align-content: center;
+  width: 100vw !important;
 }
 
-nav > * {
+.navContent {
+  max-width: 1500px;
+  display: flex;
+  align-content: center;
+  padding: 0 2rem;
+  margin: auto;
+}
+
+nav * {
   align-self: center;
   padding: 0.2rem;
   padding-left: 1rem;
 }
 
-nav > a {
+nav a {
   cursor: pointer;
   text-decoration: none;
   color: white;
-  margin-left: 1rem;
 }
 
-nav > .cartLogo {
+nav .cartLogo {
   margin-left: auto;
-  padding-right: 1rem;
 }
 
-nav > a:hover {
-  color: deepskyblue;
+nav a:hover {
+  color: cornflowerblue;
   font-weight: bolder;
 }

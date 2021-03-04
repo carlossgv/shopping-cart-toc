@@ -7,10 +7,12 @@ import CartLogo from './CartLogo';
 const Nav = () => {
   return (
     <nav>
-      <img src={wavesLogo} alt="Waves Logo" height="100px"></img>
-      <Link url="/" text="Home" />
-      <Link url="/shop" text="Shop" />
-      <CartLogo url="/cart" qty="0" />
+      <div className="navContent">
+        <img src={wavesLogo} alt="Waves Logo" height="100px"></img>
+        <Link url="/" text="Home" />
+        <Link url="/shop" text="Shop" />
+        <CartLogo url="/cart" qty="0" />
+      </div>
     </nav>
   );
 };

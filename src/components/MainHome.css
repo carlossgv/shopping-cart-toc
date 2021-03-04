@@ -2,13 +2,11 @@
   background-position: center;
   height: 100%;
   display: flex;
-
   justify-content: center;
 }
 
 .mainHome > .shopButton {
   margin: auto;
-  font-family: 'Bebas Neue', cursive;
   background: #fff;
   padding: 2rem 0 1.3rem 0;
   border-radius: 20px;
@@ -16,7 +14,6 @@
   cursor: pointer;
   outline: none;
   border: none;
-  text-decoration: none !important;
 }
 
 .mainHome > .shopButton:hover {
@@ -28,6 +25,7 @@
 }
 
 .mainHome a {
+  font-family: 'Bebas Neue', cursive !important;
   text-decoration: none !important;
   color: black;
   font-size: 6rem;

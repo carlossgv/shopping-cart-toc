@@ -1,0 +1,42 @@
+{
+    "0": {
+        "title": "Knee Length Swim Shorts",
+        "price": 15.99,
+        "code": "kneeLengthSwimShorts"
+    },
+    "1": {
+        "title": "Patterned Swim Shorts Blue",
+        "price": 29.99,
+        "code": "patternedSwimShortsBlue"
+    },
+    "2": {
+        "title": "Patterned Swim Shorts Gray",
+        "price": 24.99,
+        "code": "patternedSwimShortsGray"
+    },
+    "3": {
+        "title": "Patterned Swim Shorts Green",
+        "price": 19.99,
+        "code": "patternedSwimShortsGreen"
+    },
+    "4": {
+        "title": "Patterned Swim Shorts  Light Blue",
+        "price": 29.99,
+        "code": "patternedSwimShortsLightBlue"
+    },
+    "5": {
+        "title": "Patterned Swim Shorts Orange",
+        "price": 19.99,
+        "code": "patternedSwimShortsOrange"
+    },
+    "6": {
+        "title": "Patterned Swim Shorts Pink",
+        "price": 29.99,
+        "code": "patternedSwimShortsPink"
+    },
+    "7": {
+        "title": "Swim Shorts Black",
+        "price": 29.99,
+        "code": "swimShortsBlack"
+    }
+}

@@ -1,0 +1,41 @@
+.cartCard {
+  display: flex;
+  width: 350px;
+  margin: 0.5rem auto;
+  height: 150px;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.cartCard img {
+  height: 150px;
+}
+
+.cartCard .cartCardInfo {
+  margin-left: -2.5rem;
+}
+
+.cartCardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 0.1rem;
+}
+
+.cartCardInfo select {
+  height: 2rem;
+  margin-top: 1rem;
+  outline: none;
+  background: white;
+  border-color: gainsboro;
+}
+
+.cartCardInfo p {
+  font-size: small;
+}
+
+.cartCard svg {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}

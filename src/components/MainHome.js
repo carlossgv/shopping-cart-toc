@@ -9,7 +9,7 @@ const MainHome = () => {
       style={{ backgroundImage: `url(${homeBackground})` }}
     >
       <button className="shopButton">
-        <a href="/cart">shop.</a>
+        <a href="/shop">shop.</a>
       </button>
     </div>
   );

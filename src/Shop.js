@@ -1,7 +1,17 @@
 import React from 'react';
+import Nav from './components/Nav';
+import MainShop from './components/MainShop';
+import Footer from './components/Footer';
+import './Shop.css';
 
 const Shop = () => {
-  return <h1>This is the shop</h1>;
+  return (
+    <div className="shop">
+      <Nav />
+      <MainShop />
+      <Footer />
+    </div>
+  );
 };
 
 export default Shop;

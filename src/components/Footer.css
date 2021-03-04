@@ -1,0 +1,14 @@
+footer {
+  /* display: flex; */
+  text-align: end;
+  background: #e3b353;
+  color: white;
+  padding-right: 1rem;
+  text-shadow: black 1px 1px 1px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}

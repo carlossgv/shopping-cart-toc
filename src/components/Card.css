@@ -1,0 +1,29 @@
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem;
+  cursor: pointer;
+  padding-bottom: 2rem;
+}
+
+.cardInfo {
+  padding-top: 1rem;
+}
+
+.card button {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.7rem;
+  outline: none;
+  border: none;
+  background: cornflowerblue;
+  color: whitesmoke;
+}
+
+.card button:hover {
+  transform: scale(1.03);
+}
+
+.card button:active {
+  transform: scale(0.97);
+}
