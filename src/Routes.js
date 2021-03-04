@@ -11,6 +11,7 @@ const Routes = () => {
 
   const AddToCard = (e) => {
     let productId = e.target.parentElement.parentElement.id;
+    console.log(e.target.parentElement.parentElement);
     let button = e.target;
 
     if (button.classList.contains('notAdded')) {
@@ -32,7 +33,7 @@ const Routes = () => {
   useEffect(() => {
     let newQty = productsInCart.length;
     setQty(newQty);
-    console.log(productsInCart)
+    console.log(productsInCart);
   }, [productsInCart]);
 
   return (
@@ -45,7 +46,17 @@ const Routes = () => {
           path="/shop"
           render={(props) => <Shop {...props} handleAddToCart={AddToCard} />}
         />
-        <Route exact path="/cart" render={(props) => <Cart {...props} productsInCart={productsInCart} />} />
+        <Route
+          exact
+          path="/cart"
+          render={(props) => (
+            <Cart
+              {...props}
+              handleRemoveCard={AddToCard}
+              productsInCart={productsInCart}
+            />
+          )}
+        />
       </Switch>
     </BrowserRouter>
   );

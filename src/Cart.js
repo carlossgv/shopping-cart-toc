@@ -6,7 +6,7 @@ import './Cart.css';
 const Cart = (props) => {
   return (
     <div className="cart">
-      <MainCart productsInCart = {props.productsInCart} />
+      <MainCart productsInCart={props.productsInCart} handleRemoveCard={props.handleRemoveCard} />
       <Footer />
     </div>
   );

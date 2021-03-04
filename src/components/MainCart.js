@@ -4,19 +4,26 @@ import CartTotal from './CartTotal';
 import Items from '../static/data/items.json';
 
 const MainCart = (props) => {
-  const productsInCart = ['1', '2', '4'];
+  const productsInCart = props.productsInCart;
   const [products, setProducts] = useState([]);
+  let productsCards = [];
 
   useEffect(() => {
-    let productsCards = [];
     for (let product in productsInCart) {
       if (product in Items) {
-        // console.log(Items[product]);
-        productsCards.push(<CartCard key={product} item={Items[product]} />);
+        console.log(Items[product]);
+        productsCards.push(
+          <CartCard
+            key={product}
+            id={product}
+            removeCard={props.handleRemoveCard}
+            item={Items[product]}
+          />
+        );
       }
     }
     setProducts(productsCards);
-  }, []);
+  }, [props.productsInCart]);
 
   return (
     <div className="mainCart">

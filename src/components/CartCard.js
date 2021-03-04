@@ -16,7 +16,7 @@ const CartCard = (props) => {
   let updateAmount = (e) => setTotal(e.target.value * props.item.price);
 
   return (
-    <div className="cartCard">
+    <div className="cartCard" id={props.id}>
       <div className="cartCardImg">
         <img
           src={`../static/img/clothes/${props.item.code}/default.jpeg`}
