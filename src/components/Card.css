@@ -16,8 +16,6 @@
   font-size: 0.7rem;
   outline: none;
   border: none;
-  background: cornflowerblue;
-  color: whitesmoke;
 }
 
 .card button:hover {
@@ -26,4 +24,15 @@
 
 .card button:active {
   transform: scale(0.97);
+}
+
+.notAdded {
+  background: cornflowerblue;
+  color: whitesmoke;
+}
+
+.added {
+  background: crimson;
+  color: whitesmoke;
+
 }

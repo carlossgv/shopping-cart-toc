@@ -1,14 +1,12 @@
 import React from 'react';
-import Nav from './components/Nav';
 import MainShop from './components/MainShop';
 import Footer from './components/Footer';
 import './Shop.css';
 
-const Shop = () => {
+const Shop = (props) => {
   return (
     <div className="shop">
-      <Nav />
-      <MainShop />
+      <MainShop handleAddToCart={props.handleAddToCart} />
       <Footer />
     </div>
   );

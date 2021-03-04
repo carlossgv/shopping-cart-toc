@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
-import Cart from '../Cart';
 import './MainShop.css';
 import Items from '../static/data/items.json';
-import _ from 'lodash';
 
-const MainShop = () => {
+const MainShop = (props) => {
   const [cardsList, setCardsList] = useState([]);
 
   useEffect(() => {
@@ -15,10 +13,10 @@ const MainShop = () => {
       let item = Items[property];
       newCardsList.push(
         <Card
-          key={_.uniqueId(`${item.code}_`)}
-          title={item.title}
-          price={item.price}
-          code={item.code}
+          key={property}
+          id={property}
+          item={item}
+          handleAddToCart={props.handleAddToCart}
         />
       );
     }
