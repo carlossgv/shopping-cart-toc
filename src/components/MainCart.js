@@ -15,7 +15,7 @@ const MainCart = (props) => {
         productsCards.push(
           <CartCard
             key={product}
-            id={product}
+            id={`cartProduct_${product}`}
             removeCard={props.handleRemoveCard}
             item={Items[product]}
           />

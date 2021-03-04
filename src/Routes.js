@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import Shop from './Shop';
-import Cart from './Cart';
 import Nav from './components/Nav';
 
 const Routes = () => {
@@ -11,8 +10,17 @@ const Routes = () => {
 
   const AddToCard = (e) => {
     let productId = e.target.parentElement.parentElement.id;
-    console.log(e.target.parentElement.parentElement);
-    let button = e.target;
+    let type = e.target.parentElement.parentElement.classList.value;
+    let button = '';
+
+    if (type === 'card') {
+      button = e.target;
+      console.log(button);
+    } else {
+      button = window
+        .querySelector(`.card_${productId}`)
+        .querySelector('button');
+    }
 
     if (button.classList.contains('notAdded')) {
       button.classList.remove('notAdded');
@@ -33,7 +41,6 @@ const Routes = () => {
   useEffect(() => {
     let newQty = productsInCart.length;
     setQty(newQty);
-    console.log(productsInCart);
   }, [productsInCart]);
 
   return (
@@ -44,16 +51,12 @@ const Routes = () => {
         <Route
           exact
           path="/shop"
-          render={(props) => <Shop {...props} handleAddToCart={AddToCard} />}
-        />
-        <Route
-          exact
-          path="/cart"
           render={(props) => (
-            <Cart
+            <Shop
               {...props}
-              handleRemoveCard={AddToCard}
               productsInCart={productsInCart}
+              handleAddToCart={AddToCard}
+              handleRemoveCard={AddToCard}
             />
           )}
         />

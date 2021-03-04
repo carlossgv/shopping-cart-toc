@@ -9,12 +9,12 @@ const MainShop = (props) => {
   useEffect(() => {
     let newCardsList = [];
 
-    for (let property in Items) {
-      let item = Items[property];
+    for (let product in Items) {
+      let item = Items[product];
       newCardsList.push(
         <Card
-          key={property}
-          id={property}
+          key={product}
+          id={`item_${product}`}
           item={item}
           handleAddToCart={props.handleAddToCart}
         />

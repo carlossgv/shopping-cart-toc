@@ -10,7 +10,7 @@ const Nav = (props) => {
         <img src={wavesLogo} alt="Waves Logo" height="100px"></img>
         <a href="/">Home</a>
         <a href="/shop">Shop</a>
-        <CartLogo url="/cart" qty={props.qty} />
+        <CartLogo qty={props.qty} />
       </div>
     </nav>
   );
