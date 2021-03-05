@@ -1,9 +1,9 @@
 .cartCard {
   display: flex;
+  justify-content: space-between;
   width: 350px;
   margin: 0.5rem auto;
   height: 150px;
-  justify-content: space-between;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
 }
@@ -13,14 +13,19 @@
 }
 
 .cartCard .cartCardInfo {
-  margin-left: -2.5rem;
+  margin-left: 0.5rem;
+}
+
+.cartCard .leftContainer {
+  display: flex;
 }
 
 .cartCardInfo {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 0.1rem;
+  padding-bottom: 0.5rem;
+  width: 200px;
 }
 
 .cartCardInfo select {
@@ -35,7 +40,8 @@
   font-size: small;
 }
 
-.cartCard svg {
+.cartCard .trashIcon {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
+  height: 20px;
 }

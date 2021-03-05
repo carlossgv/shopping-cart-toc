@@ -8,7 +8,7 @@ const MainCart = (props) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    props.productsInCart.forEach((productId, index) => {
+    props.productsInCart.forEach((productId) => {
       productsCardsList.push(
         <CartCard
           id={`cartCard_${productId}`}
@@ -19,7 +19,6 @@ const MainCart = (props) => {
       );
     });
 
-    console.log(productsCardsList);
 
     setProducts(productsCardsList);
   }, [props]);

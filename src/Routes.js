@@ -27,14 +27,13 @@ const Routes = () => {
 
   const AddToCart = (e) => {
     let productId = e.target.parentElement.parentElement.id;
+
     productId = _.split(productId, '_', 2)[1];
 
     setProductsInCart((arr) => {
       if (arr.includes(productId)) {
-        console.log('Removed from cart');
         return arr.filter((item) => item !== productId);
       } else {
-        console.log('Added to cart');
         return [...arr, productId];
       }
     });
