@@ -5,11 +5,13 @@ import Footer from './components/Footer';
 import './Shop.css';
 
 const Shop = (props) => {
+  // console.log(props.items);
   return (
     <>
       <div className="shop">
-        <MainShop handleAddToCart={props.handleAddToCart} />
+        <MainShop items={props.items} handleAddToCart={props.handleAddToCart} />
         <MainCart
+          items={props.items}
           productsInCart={props.productsInCart}
           handleRemoveCard={props.handleRemoveCard}
         />

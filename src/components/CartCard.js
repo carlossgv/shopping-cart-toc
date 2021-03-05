@@ -27,7 +27,7 @@ const CartCard = (props) => {
         <h5>{props.item.title}</h5>
         <p>{props.item.price}</p>
         <p>{`Total: ${total}`}</p>
-        <select onChange={updateAmount}>{options}</select>
+        <select >{options}</select>
       </div>
       <div className="cartCartButton">
         <svg

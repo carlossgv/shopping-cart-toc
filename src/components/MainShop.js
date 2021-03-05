@@ -1,28 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import './MainShop.css';
-import Items from '../static/data/items.json';
 
 const MainShop = (props) => {
-  const [cardsList, setCardsList] = useState([]);
+  const [cardsList, setCardsList] = useState(props.items);
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   let newCardsList = [];
+  //   console.log(cardsList);
+
+  //   cardsList.forEach((product) => {
+  //     newCardsList.push(
+  //       <Card
+  //         key={product.code}
+  //         handleAddToCard={props.handleAddToCart}
+  //         item={product}
+  //       />
+  //     );
+  //   });
+
+  //   console.log(newCardsList);
+  //   setCardsList(...cardsList, newCardsList)
+  //   console.log(cardsList)
+  // }, []);
+
+  const createCardList = (items) => {
     let newCardsList = [];
-
-    for (let product in Items) {
-      let item = Items[product];
+    items.forEach((product) => {
       newCardsList.push(
         <Card
-          key={product}
-          id={`item_${product}`}
-          item={item}
+          key={product.code}
           handleAddToCart={props.handleAddToCart}
+          item={product}
+          id={`card_${product.id}`}
         />
       );
-    }
-
-    setCardsList(newCardsList);
-  }, []);
+    });
+    return newCardsList;
+  };
 
   return (
     <div className="mainShop">
@@ -38,7 +53,7 @@ const MainShop = (props) => {
             you’ll be ready to hit the beach or pool in just a few scrolls.
           </p>
         </div>
-        <div className="cardsList">{cardsList}</div>
+        <div className="cardsList">{createCardList(props.items)}</div>
       </div>
     </div>
   );
