@@ -21,6 +21,7 @@ nav a {
   cursor: pointer;
   text-decoration: none;
   color: white;
+  font-size: 1.1rem;
 }
 
 nav .cartLogo {
@@ -28,6 +29,18 @@ nav .cartLogo {
 }
 
 nav a:hover {
-  color: cornflowerblue;
+  color: black;
+  font-weight: bolder;
+}
+
+.cartLogo {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.cartLogo:hover {
+  color: black;
   font-weight: bolder;
 }

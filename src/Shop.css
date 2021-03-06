@@ -14,7 +14,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: 1090px) {
+@media (min-width: 1199px) {
   .shop {
     flex: 1 1 auto;
   }

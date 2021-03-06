@@ -11,17 +11,21 @@
   padding: 2rem;
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1199px) {
   .mainCart {
-    z-index: 1;
+    opacity: 0;
+    z-index: -1;
     width: 100%;
     position: fixed;
     overflow: auto;
+    transition: all 1s linear;
   }
 }
 
-@media (min-width: 1090px) {
+@media (min-width: 1199px) {
   .mainCart {
+    opacity: 100;
+    z-index: 0;
     justify-self: center;
     margin-top: 2rem;
     margin: 0px auto;
