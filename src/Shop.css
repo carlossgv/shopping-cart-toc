@@ -10,4 +10,12 @@
   flex-wrap: wrap;
   min-height: 100vh;
   min-width: 360px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1090px) {
+  .shop {
+    flex: 1 1 auto;
+  }
 }

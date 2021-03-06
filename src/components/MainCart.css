@@ -1,16 +1,34 @@
 .mainCart {
-  width: 340px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
-  justify-self: start;
+}
+
+.cart {
+  width: 450px;
+  background: white;
+  margin: auto;
+  padding: 2rem;
+}
+
+@media (max-width: 1090px) {
+  .mainCart {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+  }
 }
 
 @media (min-width: 1090px) {
   .mainCart {
-    padding-top: 2.5rem;
     justify-self: center;
+    margin-top: 2rem;
+    margin: 0px auto;
+  }
+
+  .cart {
+    margin: 1rem auto;
   }
 }
 

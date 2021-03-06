@@ -45,10 +45,12 @@ const MainCart = (props) => {
 
   return (
     <div className="mainCart">
-      <h1>Shopping Cart</h1>
-      <div>
-        <div className="cartProducts">{products}</div>
-        <CartTotal total={total} />
+      <div className="cart">
+        <h1>Shopping Cart</h1>
+        <div>
+          <div className="cartProducts">{products}</div>
+          <CartTotal total={total} />
+        </div>
       </div>
     </div>
   );
