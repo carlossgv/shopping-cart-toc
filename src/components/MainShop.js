@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Card from './Card';
 import './MainShop.css';
 
 const MainShop = (props) => {
-  const [cardsList, setCardsList] = useState(props.items);
+  // const [cardsList, setCardsList] = useState(props.items);
 
   // useEffect(() => {
   //   let newCardsList = [];

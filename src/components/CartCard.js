@@ -3,24 +3,38 @@ import './CartCard.css';
 
 const CartCard = (props) => {
   const [options, setOptions] = useState([]);
-  const [total, setTotal] = useState('');
+  const [total, setTotal] = useState({
+    code: props.item.code,
+    price: props.item.price,
+  });
   let productTotal = '';
+
+  // TODO: IMPORTANT! FIXED UPDATED TOTAL IN REAL TIME WHEN CHANGING QTY
 
   useEffect(() => {
     let tempOptions = [];
     for (let i = 1; i < 21; i++) {
       tempOptions.push(<option>{i}</option>);
     }
+    console.log('im in use effect');
     setOptions(tempOptions);
-    setTotal(props.item.price);
+    setTotal({
+      code: props.item.code,
+      price: props.item.price,
+    });
 
-    return;
-  }, []);
+    props.cardTotal(total);
+  }, [props]);
 
   const updateAmount = (e) => {
     if (e) {
       productTotal = e.target.value * props.item.price;
-      setTotal(productTotal);
+      setTotal({
+        code: props.item.code,
+        price: productTotal,
+      });
+
+      props.cardTotal(total);
     }
   };
 
@@ -35,8 +49,8 @@ const CartCard = (props) => {
         </div>
         <div className="cartCardInfo">
           <h5>{props.item.title}</h5>
-          <p>{parseFloat(props.item.price).toFixed(2)}</p>
-          <p>{`Total: ${parseFloat(total).toFixed(2)}`}</p>
+          <p>Price: ${parseFloat(props.item.price).toFixed(2)}</p>
+          <p>{`Total: $${parseFloat(total.price).toFixed(2)}`}</p>
           <select onChange={updateAmount}>{options}</select>
         </div>
       </div>

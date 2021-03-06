@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import './TotalTable.css';
 
 const TotalTable = (props) => {
+  // const [total, setTotal] = useState(0);
+
+  // useEffect(() => {
+  //   if (props.item) {
+  //     setTotal(props.total);
+  //   }
+  // }, [props]);
+
   return (
     <>
       <table className="subTotalTable">
         <tbody>
           <tr>
             <th className="tableHeader">Order value</th>
-            <td className="tableSubTotal">${props.total}</td>
+            <td className="tableSubTotal">
+              ${parseFloat(props.total).toFixed(2)}
+            </td>
           </tr>
           <tr>
             <th className="tableHeader">Shipping</th>
@@ -19,7 +30,9 @@ const TotalTable = (props) => {
         <tbody>
           <tr>
             <th className="tableHeader">Total</th>
-            <td className="tableSubTotal">${props.total}</td>
+            <td className="tableSubTotal">
+              <strong>${parseFloat(props.total).toFixed(2)}</strong>
+            </td>
           </tr>
         </tbody>
       </table>
