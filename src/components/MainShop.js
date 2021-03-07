@@ -3,26 +3,6 @@ import Card from './Card';
 import './MainShop.css';
 
 const MainShop = (props) => {
-  // const [cardsList, setCardsList] = useState(props.items);
-
-  // useEffect(() => {
-  //   let newCardsList = [];
-  //   console.log(cardsList);
-
-  //   cardsList.forEach((product) => {
-  //     newCardsList.push(
-  //       <Card
-  //         key={product.code}
-  //         handleAddToCard={props.handleAddToCart}
-  //         item={product}
-  //       />
-  //     );
-  //   });
-
-  //   console.log(newCardsList);
-  //   setCardsList(...cardsList, newCardsList)
-  //   console.log(cardsList)
-  // }, []);
 
   const createCardList = (items) => {
     let newCardsList = [];

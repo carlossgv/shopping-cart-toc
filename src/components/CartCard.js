@@ -43,7 +43,7 @@ const CartCard = (props) => {
       <div className="leftContainer">
         <div className="cartCardImg">
           <img
-            src={`shopping-cart-toc/static/img/clothes/${props.item.code}/default.jpeg`}
+            src={`${process.env.PUBLIC_URL}/static/img/clothes/${props.item.code}/default.jpeg`}
             alt={props.item.title}
           ></img>
         </div>
@@ -58,7 +58,7 @@ const CartCard = (props) => {
         <img
           onClick={props.removeCard}
           className="trashIcon"
-          src={'shopping-cart-toc/static/img/trashIcon.png'}
+          src={`${process.env.PUBLIC_URL}/static/img/trashIcon.png`}
           alt="Trash Icon"
         ></img>
       </div>

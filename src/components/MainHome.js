@@ -9,7 +9,7 @@ const MainHome = () => {
       style={{ backgroundImage: `url(${homeBackground})` }}
     >
       <button className="shopButton">
-        <a href="/shop">shop.</a>
+        <a href={process.env.PUBLIC_URL + '/shop'}>shop.</a>
       </button>
     </div>
   );

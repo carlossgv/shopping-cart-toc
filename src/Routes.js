@@ -43,10 +43,10 @@ const Routes = () => {
     <BrowserRouter>
       <Nav qty={qty} />
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path={process.env.PUBLIC_URL + '/'} component={App} />
         <Route
           exact
-          path="/shop"
+          path={process.env.PUBLIC_URL + '/shop'}
           render={(props) => (
             <Shop
               {...props}

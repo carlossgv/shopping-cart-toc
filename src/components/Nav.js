@@ -26,8 +26,8 @@ const Nav = (props) => {
     <nav>
       <div className="navContent">
         <img src={wavesLogo} alt="Waves Logo" height="100px"></img>
-        <a href="/">Home</a>
-        <a href="/shop">Shop</a>
+        <a href={process.env.PUBLIC_URL + '/'}>Home</a>
+        <a href={process.env.PUBLIC_URL + '/shop'}>Shop</a>
         <CartLogo handleCart={handleCart} qty={props.qty} />
       </div>
     </nav>

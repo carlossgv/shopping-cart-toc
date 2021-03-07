@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = (props) => {
   const [image, setImage] = useState(
-    `shopping-cart-toc/static/img/clothes/${props.item.code}/default.jpeg`
+    `${process.env.PUBLIC_URL}/static/img/clothes/${props.item.code}/default.jpeg`
   );
 
   const [buttonProps, setButtonProps] = useState({
@@ -29,13 +29,13 @@ const Card = (props) => {
 
   const handleMouseOver = () => {
     setImage(
-      `shopping-cart-toc/static/img/clothes/${props.item.code}/model.jpeg`
+      `${process.env.PUBLIC_URL}/static/img/clothes/${props.item.code}/model.jpeg`
     );
   };
 
   const handleMouseLeave = () => {
     setImage(
-      `shopping-cart-toc/static/img/clothes/${props.item.code}/default.jpeg`
+      `${process.env.PUBLIC_URL}/static/img/clothes/${props.item.code}/default.jpeg`
     );
   };
 
