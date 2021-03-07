@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './MainHome.css';
 import homeBackground from '../static/img/homeBackground.jpg';
 
@@ -9,7 +10,7 @@ const MainHome = () => {
       style={{ backgroundImage: `url(${homeBackground})` }}
     >
       <button className="shopButton">
-        <a href={process.env.PUBLIC_URL + '/shop'}>shop.</a>
+        <Link to="/shop">shop.</Link>
       </button>
     </div>
   );

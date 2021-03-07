@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 import wavesLogo from '../static/img/wavesLogo.png';
 import CartLogo from './CartLogo';
@@ -26,8 +27,8 @@ const Nav = (props) => {
     <nav>
       <div className="navContent">
         <img src={wavesLogo} alt="Waves Logo" height="100px"></img>
-        <a href={process.env.PUBLIC_URL + '/'}>Home</a>
-        <a href={process.env.PUBLIC_URL + '/shop'}>Shop</a>
+        <Link to="/">Home</Link>
+        <Link to="/shop">Shop</Link>
         <CartLogo handleCart={handleCart} qty={props.qty} />
       </div>
     </nav>

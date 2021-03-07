@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import Shop from './Shop';
 import NotFound from './NotFound';
@@ -41,11 +41,11 @@ const Routes = () => {
   };
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename='/'>
       <Nav qty={qty} />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/shop">
+        <Route exact path="/shop">
           <Shop
             items={Object.values(Items)}
             handleAddToCart={AddToCart}
@@ -55,7 +55,7 @@ const Routes = () => {
         </Route>
         <Route status={404} component={NotFound} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
