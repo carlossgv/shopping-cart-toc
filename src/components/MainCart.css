@@ -29,6 +29,7 @@
     justify-self: center;
     margin-top: 2rem;
     margin: 0px auto;
+    transition: all 1s linear;
   }
 
   .cart {

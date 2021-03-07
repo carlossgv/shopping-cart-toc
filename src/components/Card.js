@@ -3,14 +3,13 @@ import './Card.css';
 
 const Card = (props) => {
   const [image, setImage] = useState(
-    `../static/img/clothes/${props.item.code}/default.jpeg`
+    `shopping-cart-toc/static/img/clothes/${props.item.code}/default.jpeg`
   );
 
   const [buttonProps, setButtonProps] = useState({
     text: 'Add to cart',
     className: 'notAdded',
   });
-
 
   useEffect(() => {
     if (props.item.isAdded) {
@@ -27,12 +26,17 @@ const Card = (props) => {
   }, [props]);
 
   // TODO: DO THIS WITH USEEFFECT
+
   const handleMouseOver = () => {
-    setImage(`../static/img/clothes/${props.item.code}/model.jpeg`);
+    setImage(
+      `shopping-cart-toc/static/img/clothes/${props.item.code}/model.jpeg`
+    );
   };
 
   const handleMouseLeave = () => {
-    setImage(`../static/img/clothes/${props.item.code}/default.jpeg`);
+    setImage(
+      `shopping-cart-toc/static/img/clothes/${props.item.code}/default.jpeg`
+    );
   };
 
   return (

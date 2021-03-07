@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Nav.css';
 import wavesLogo from '../static/img/wavesLogo.png';
 import CartLogo from './CartLogo';
@@ -16,6 +16,9 @@ const Nav = (props) => {
         cart.style.opacity = 0;
         cart.style.zIndex = -1;
       }
+    } else {
+      cart.style.opacity = 100;
+      cart.style.zIndex = 1;
     }
   };
 

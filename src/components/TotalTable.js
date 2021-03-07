@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './TotalTable.css';
 
 const TotalTable = (props) => {
-  // const [total, setTotal] = useState(0);
-
-  // useEffect(() => {
-  //   if (props.item) {
-  //     setTotal(props.total);
-  //   }
-  // }, [props]);
-
   return (
     <>
       <table className="subTotalTable">

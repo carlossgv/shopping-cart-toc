@@ -16,7 +16,7 @@ const CartCard = (props) => {
     for (let i = 1; i < 21; i++) {
       tempOptions.push(<option>{i}</option>);
     }
-    console.log('im in use effect');
+
     setOptions(tempOptions);
     setTotal({
       code: props.item.code,
@@ -43,7 +43,7 @@ const CartCard = (props) => {
       <div className="leftContainer">
         <div className="cartCardImg">
           <img
-            src={`../static/img/clothes/${props.item.code}/default.jpeg`}
+            src={`shopping-cart-toc/static/img/clothes/${props.item.code}/default.jpeg`}
             alt={props.item.title}
           ></img>
         </div>
@@ -58,7 +58,7 @@ const CartCard = (props) => {
         <img
           onClick={props.removeCard}
           className="trashIcon"
-          src={'../static/img/trashIcon.png'}
+          src={'shopping-cart-toc/static/img/trashIcon.png'}
           alt="Trash Icon"
         ></img>
       </div>
