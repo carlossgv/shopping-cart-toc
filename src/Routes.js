@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import Shop from './Shop';
+import NotFound from './NotFound';
 import Nav from './components/Nav';
 import Items from './static/data/items.json';
 import _ from 'lodash';
@@ -40,23 +41,19 @@ const Routes = () => {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Nav qty={qty} />
       <Switch>
-        <Route exact path={process.env.PUBLIC_URL + '/'} component={App} />
-        <Route
-          exact
-          path={process.env.PUBLIC_URL + '/shop'}
-          render={(props) => (
-            <Shop
-              {...props}
-              items={Object.values(Items)}
-              handleAddToCart={AddToCart}
-              handleRemoveCard={AddToCart}
-              productsInCart={productsInCart}
-            />
-          )}
-        />
+        <Route exact path="/" component={App} />
+        <Route path="/shop">
+          <Shop
+            items={Object.values(Items)}
+            handleAddToCart={AddToCart}
+            handleRemoveCard={AddToCart}
+            productsInCart={productsInCart}
+          />
+        </Route>
+        <Route status={404} component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
