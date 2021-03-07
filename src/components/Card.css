@@ -1,5 +1,5 @@
 .card {
-  width: 200px;
+  width: 15rem;
   display: flex;
   flex-direction: column;
   margin: 0.3rem;
@@ -34,5 +34,4 @@
 .added {
   background: crimson;
   color: whitesmoke;
-
 }
